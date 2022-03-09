@@ -1,15 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
 import Row from './Row';
+import Banner from './Banner';
 import requests from './requests';
 
 function App() { 
   return (
     <div className="App">
       <h1>lets build netflix</h1>
-      
+      <Banner />
+
       <Row title="NETFLIX ORIGINALS" fetchUrl={requests.fetchNetflixOriginals}
-       isLargeRow/>
+       isLargeRow={true}/>
       <Row title="Trending Now" fetchUrl={requests.fetchTrending}/>
       <Row title="Top Rated" fetchUrl={requests.fetchTopRated}/>
       <Row title="Action Movies" fetchUrl={requests.fetchActionMovies}/>
